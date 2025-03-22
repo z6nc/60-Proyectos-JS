@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="TicketGenerator.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1"></script>
+    <title>Ticket Generator</title>
+  </head>
+  <body>
+    <main>
+      <section class="container-formulario">
+        <div class="container-title">
+          <h1>Ticket Generator</h1>
+          <p>Generator your ticket</p>
+        </div>
+        <form id="formulario">
+          <div class="containerFormImg">
+            <label class="inputText">Upload Avatar</label>
+            <div class="containerImg">
+              <img id="preview" src="./asset/icon-upload.svg" />
+              <input class="inputFiles" type="file" id="AvatarUser" required />
+              <label>Drag an drop or click to upload</label>
+            </div>
+            <p class="textAlert">
+              alert upload your photo format(jpg , png , max size = 500mb)
+            </p>
+          </div>
+          <div class="containerInput">
+            <label class="inputText">Full name</label>
+            <input class="inputCustom" type="text" id="fullNameUser" required />
+          </div>
+          <div class="containerInput">
+            <label class="inputText">Email Address</label>
+            <input
+              class="inputCustom"
+              type="email"
+              placeholder="example@email.com"
+              id="emailUser"
+              required
+            />
+          </div>
+          <div class="containerInput">
+            <label class="inputText">Github UserName</label>
+            <input
+              class="inputCustom"
+              type="text"
+              id="githubUser"
+              placeholder="@yourusername"
+              required
+            />
+          </div>
+
+          <button class="btnGenarator" type="submit">
+            Generator My Ticket
+          </button>
+        </form>
+      </section>
+
+      <!-- modal para informar que el  -->
+
+      <!-- ticket -->
+       
+      <section class="container-ticket">
+        <div class="container-title">
+          <h2>Ticket</h2>
+          <p>
+            Your ticket Generator is satisfaced , so cheack your email
+            <span>example@gmail.com</span>
+          </p>
+        </div>
+       
+        <div class="wrapper">
+          <div class="ticket">
+            <article class="ticket-Info">
+              <div class="ticket-Date">
+                <h2>Codif Conf</h2>
+                <span>jan 32 ,2025 / Austin ,TX</span>
+              </div>
+
+                 <img class="userImg" src="asset/icon-upload.svg" alt="" />
+                <div class="ticket-info-User">
+                  <h2 class="userName">Jonatan Kristof</h2>
+                  <p class="userGithub">@jonatanKristof0101</p>
+                </div>
+            </article>
+
+            <article class="ticket-number">
+              <p class="numberTicket">#-----</p>
+            </article>
+          </div>
+      </div>
+      </section>
+
+    </main>
+
+    <script src="TicketGenerator.js"></script>
+    <script src="Ticket3D.js"></script>
+  </body>
+</html>

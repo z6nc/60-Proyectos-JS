@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="/Basic_Calculator/Basic_Calculator.css" />
+  </head>
+  <body>
+    <h1>Basic Calculator</h1>
+
+    <main class="container-principal">
+      <div class="container-calculadora">
+        <div class="container-resultados">
+          <input class="valores" type="text" name="" id="" />
+        </div>
+        <div class="caluladora">
+          <button class="btn btnConvertidor" onclick="EliminarTodosCarateres()">
+            M+
+          </button>
+          <button class="btn btnConvertidor" onclick="EliminarTodosCarateres()">
+            M-
+          </button>
+          <button
+            class="btn btnConvertidor"
+            onclick="EliminarTodosCarateres()"
+          ></button>
+          <button class="btn btnClear" onclick="EliminarTodosCarateres()">
+            C
+          </button>
+
+          <button class="btn btnNumber" onclick="AñadirValor('9')">9</button>
+          <button class="btn btnNumber" onclick="AñadirValor('8')">8</button>
+          <button class="btn btnNumber" onclick="AñadirValor('7')">7</button>
+          <button class="btn btnOperator" onclick="AñadirValor('/')">/</button>
+
+          <button class="btn btnNumber" onclick="AñadirValor('6')">6</button>
+          <button class="btn btnNumber" onclick="AñadirValor('5')">5</button>
+          <button class="btn btnNumber" onclick="AñadirValor('4')">4</button>
+          <button class="btn btnOperator" onclick="AñadirValor('*')">*</button>
+
+          <button class="btn btnNumber" onclick="AñadirValor('3')">3</button>
+          <button class="btn btnNumber" onclick="AñadirValor('2')">2</button>
+          <button class="btn btnNumber" onclick="AñadirValor('1')">1</button>
+          <button class="btn btnOperator" onclick="AñadirValor('+')">-</button>
+
+          <button class="btn btnNumber" onclick="AñadirValor('.')">.</button>
+          <button class="btn btnNumber" onclick="AñadirValor('0')">0</button>
+          <button class="btn btnNumber" onclick="AñadirValor('0')">0</button>
+          <button class="btn btnOperator" onclick="AñadirValor('+')">+</button>
+
+          <button class="btn btnOperator" onclick="borrarUltimoDigito()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              width ="35px"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z"
+              />
+            </svg>
+          </button>
+          <button class="btn btnIquals" onclick="resultado()">=</button>
+        </div>
+      </div>
+
+      <div class="container-Historial">
+        <h2>Historial</h2>
+
+        <div class="Historial"></div>
+        <button class="btn-historial" onclick="EliminarHistorial()">
+          Borrar Historial
+        </button>
+      </div>
+    </main>
+    <script src="/Basic_Calculator/Basic_Calculator.js"></script>
+  </body>
+</html>

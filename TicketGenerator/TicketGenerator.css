@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root{
+    --colorInputText : rgb(228, 228, 228);
+    --colorSecundario : rgb(255, 255, 255);
+    --borderImg: 1px solid ;
+    --titulo : 1em;
+}
+
+/*  formatear  HTML  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: "Inconsolata", monospace;
+    background: linear-gradient(-60deg , black ,  blue  , black);
+    color: white;
+}
+
+.container-title{
+    text-align: center;
+    font-size: var(--titulo);
+    padding: 2em 0;
+}
+main{
+     width: 100%;
+}
+.container-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 100vh ;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(5, 5, 5, 0.336);
+    border-radius: 9px;
+}
+
+.containerFormImg{
+    width: 100%;
+}
+.containerImg{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 120px;
+    margin: 20px 0px;
+    overflow: hidden;
+    border: 1px dashed gray;
+    border-radius: 10px;
+}
+.containerImg img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    z-index: -20;
+    background-color: rgba(222, 216, 216, 0.349);
+    padding: 9px;
+}
+
+.containerImg input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+
+.inputText{
+    font-size:15px ;
+    color: var(--colorInputText)
+}
+.textAlert{
+    font-size: 12px;
+    color: rgb(201, 199, 199);
+    text-align: center;
+}
+
+
+
+.inputCustom{
+    width:100%;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 9px;
+    padding: 14px ;
+    margin-top: 9px;
+    color: white;
+    transition: border 0.3s;
+}
+
+.inputCustom::placeholder{
+    color: rgb(179, 177, 177)
+}
+
+.inputCustom:focus:invalid {
+    border-color: red;
+}
+
+.inputCustom:focus:valid {
+    border-color: rgb(0, 255, 64);
+}
+ .btnGenarator{
+    width:100%;
+    background: salmon;
+    padding: 18px 0;
+    border: none;
+    color: var(--colorInputText);
+    border-radius: 9px;
+    font-weight: 600;
+    cursor: pointer;
+ }
+
+ /* ticket  */
+
+ .container-ticket{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .wrapper{
+    perspective: 1000px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .ticket{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 250px;
+    border: var(--borderImg);
+    border-radius: 9px;
+    cursor: default;
+    transform-style: preserve-3d;
+    will-change: transform;
+    background: linear-gradient( -190deg ,  rgba(255, 149, 0, 0.992) 30% , rgb(255, 106, 0));
+    box-shadow: 0px 0px 0px  15px rgba(219, 219, 219, 0.3);
+}
+ 
+
+ .ticket-Info{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+   padding: 22px;
+   overflow: hidden;
+}
+
+.ticket-Info img{
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    filter:  brightness(75%);
+}
+
+.ticket-number{
+    width:90px;
+   border-left: 0.2em dashed rgba(253, 253, 253, 0.705);   
+}
+
+
+.ticket-Date span{
+   color: var(--colorSecundario);
+   font-size: 14px;
+}
+
+.ticket-info-User {
+   display: inline-flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 10px;
+}
+
+.ticket-info-User h2{
+    font-size: 40px;
+    font-weight: 900;
+    width: 95px;
+}
+.ticket-info-User p{
+    font-size: 20px;
+}
+
+.ticket-number{
+    color:white;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+}
+.ticket-number p{
+    writing-mode: vertical-rl; /* Texto en vertical de derecha a izquierda */
+    letter-spacing: 3px;
+    font-size: 19px;
+}
+
