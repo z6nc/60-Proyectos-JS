@@ -25,6 +25,9 @@ body{
     font-size: var(--titulo);
     padding: 2em 0;
 }
+.container-title h2{
+    margin-bottom: 17px;
+}
 main{
      width: 100%;
 }
